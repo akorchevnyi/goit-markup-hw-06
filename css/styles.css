@@ -674,14 +674,7 @@ header {
 
 /*region footer*/
 .footer {
-    padding: 96px 0;
     background-color: var(--dark-cl);
-}
-
-@media (min-width: 1158px) {
-    .footer {
-        padding: 100px 0;
-    }
 }
 
 
@@ -690,6 +683,7 @@ header {
     flex-direction: column;
     gap: 72px;
     align-items: center;
+    padding: 96px 16px;
 }
 
 @media (min-width: 768px) {

@@ -318,11 +318,12 @@ header {
 /*endregion Header*/
 
 /*region Hero*/
+
 .hero {
-    max-width: 1440px;
+    max-width: 320px;
     margin: 0 auto;
     background-color: var(--dark-cl);
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/img-name.jpg");
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -330,20 +331,38 @@ header {
 }
 
 @media (min-resolution: 192dpi) {
-    .box {
-    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/img-name@2x.jpg");
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero-mobile@2x.jpg");
     }
 }
+
 
 @media (min-width: 768px) {
     .hero {
+        max-width: 768px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero-tablet@1x.jpg");
         padding: 112px 0;
+    }
+
+    @media (min-resolution: 192dpi) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero-tablet@2x.jpg");
+        }
     }
 }
 
+
 @media (min-width: 1158px) {
     .hero {
+        max-width: 1440px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero-desktop@1x.jpg");
         padding: 188px 0;
+    }
+
+    @media (min-resolution: 192dpi) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero-desktop@2x.jpg");
+        }
     }
 }
 
@@ -649,6 +668,11 @@ header {
     overflow: hidden;
 }
 
+
+.portfolio-image {
+
+}
+
 .portfolio-overlay {
     position: absolute;
     top: 0;
@@ -673,17 +697,26 @@ header {
 /*endregion Portfolio*/
 
 /*region footer*/
+
 .footer {
     background-color: var(--dark-cl);
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
+@media (min-width: 1158px) {
+    .footer {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
 
 .footer-container {
     display: flex;
     flex-direction: column;
     gap: 72px;
     align-items: center;
-    padding: 96px 16px;
+    padding: 0 16px;
 }
 
 @media (min-width: 768px) {
@@ -694,7 +727,12 @@ header {
         align-items: baseline;
         gap: 24px;
         row-gap: 72px;
-        padding: 96px 108px;
+    }
+}
+
+@media (min-width: 758px) and (max-width: 1157px) {
+    .footer-container{
+        width: 584px;
     }
 }
 
